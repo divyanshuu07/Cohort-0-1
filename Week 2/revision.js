@@ -31,3 +31,33 @@ setTimeout(function(){
 
 console.log("hii2")
 
+//PROMISES
+
+//Normal async function
+function myOwnSetTimeout(callback, duration) {
+    setTimeout(callback, duration);
+  }
+  
+  myOwnSetTimeout(function () {
+    console.log("after Set Timeout");
+  }, 2000);
+
+  //using Promises
+//doing the above using promises
+function promisfy(duration){
+    const p=new Promise(function(resolve){
+      setTimeout(function(){
+        resolve();
+      },duration);
+    });
+    return p;
+  }
+  
+  
+  const ans=promisfy(2000);
+  ans.then(function(){
+    console.log("done");
+  })
+  
+
+  
