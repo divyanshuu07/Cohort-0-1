@@ -1,3 +1,5 @@
+// express is a library that gives u high level constructs to create http servers.
+
 const express = require('express');
 
 const app=express();
