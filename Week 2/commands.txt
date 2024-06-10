@@ -1,0 +1,25 @@
+TERMINAL COMMANDS
+Terminal-- another interface to do things on ur machine
+
+
+1. CD
+    cd -- current directory
+    cd(followed by path) -- changes directory to the given path
+    cd.. -- take u one folder before
+
+2.ls--dir
+    to list the contents of the directory.
+
+3.mkdir(make directory)
+    used to create folders in the  directory.
+
+4.echo.> filenam.txt
+    used to create a file in the directory.
+
+5.type(followed by file name / directory)
+    open the file.
+
+
+
+
+    
