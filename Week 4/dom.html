@@ -1,0 +1,27 @@
+<html>
+    <script>
+        
+        let timeout;
+        function debouncePopulateDiv(){
+            //how to cancel a clock?
+            //using clearTimeout
+            clearTimeout(timeout)
+            timeout=setTimeout(()=>{
+                populateDiv()
+            },1000);
+           
+        }
+        function populateDiv(){
+            const a=document.getElementById("firstNumber").value;
+            const b=document.getElementById("secondNumber").value;
+            const element=document.getElementById("finalSum");
+            console.log(element);
+            element.innerHTML=parseInt(a)+parseInt(b);
+        }
+    </script>
+    <body>
+        <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First Number"> <br><br>
+        <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second Number"><br><br>
+        <div id="finalSum"></div>
+    </body>
+</html>
