@@ -1,1 +1,3 @@
-# Basic Counter app using React.
+# Counter app
+
+I created this app using Basic react.
