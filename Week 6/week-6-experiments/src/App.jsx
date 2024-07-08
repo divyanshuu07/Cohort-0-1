@@ -1,33 +1,85 @@
+/*
+this code for how to re render the component in react without
+rerendering the whole parent element.
+*/
+
 import React from "react"
 import { useState } from "react"
 
-function App() {
+// function App() {
 
-  return (
-    <>
-    <HeaderWithButton/>
-      <Header title="divyanshu2"></Header>
-    </>
+//   return (
+//     <>
+//     <HeaderWithButton/>
+//       <Header title="divyanshu2"></Header>
+//     </>
+//   )
+// }
+
+// function HeaderWithButton(){
+
+//   const [title,setTitle] =useState("My name is Divyanshu Singh");
+
+//   function updateTitle(){
+//     setTitle("my name is " +Math.random())
+//   }
+
+//   return <div>
+//     <button onClick={updateTitle}>Update the title</button>
+//     <Header title={title}></Header>
+//   </div>
+// }
+
+// function Header({title}){
+//   return <div>
+//     {title}
+//   </div>
+// }
+
+
+let counter =4;
+
+function App(){
+
+  const [todos,setTodos]=useState([{
+    id:1,
+    title:"go to gym",
+    description:"go to gym today"
+  },{
+    id:2,
+    title:"go to gym",
+    description:"go to gym today"
+  },{
+    id:3,
+    title:"go to gym",
+    description:"go to gym today"
+  }])
+
+  function addTodo(){
+    setTodos([...todos, {
+      id:counter++,
+      title: Math.random(),
+      description: Math.random()
+    }])
+  }
+
+  return(
+    <div>
+      <button onClick={addTodo}>Add the Todo</button>
+        {todos.map(todo => <Todo key={todo.id} title={todo.title} description={todo.description}/>)}
+    </div>
   )
 }
 
-function HeaderWithButton(){
-
-  const [title,setTitle] =useState("My name is Divyanshu Singh");
-
-  function updateTitle(){
-    setTitle("my name is " +Math.random())
-  }
-
+function Todo({title,description}){
   return <div>
-    <button onClick={updateTitle}>Update the title</button>
-    <Header title={title}></Header>
-  </div>
-}
+    <h1>
+      {title}
+    </h1>
 
-function Header({title}){
-  return <div>
-    {title}
+    <h5>
+      {description}
+    </h5>
   </div>
 }
 
