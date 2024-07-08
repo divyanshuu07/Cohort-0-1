@@ -6,35 +6,35 @@ rerendering the whole parent element.
 import React from "react"
 import { useState } from "react"
 
-// function App() {
+function App() {
 
-//   return (
-//     <>
-//     <HeaderWithButton/>
-//       <Header title="divyanshu2"></Header>
-//     </>
-//   )
-// }
+  return (
+    <>
+    <HeaderWithButton/>
+      <Header title="divyanshu2"></Header>
+    </>
+  )
+}
 
-// function HeaderWithButton(){
+function HeaderWithButton(){
 
-//   const [title,setTitle] =useState("My name is Divyanshu Singh");
+  const [title,setTitle] =useState("My name is Divyanshu Singh");
 
-//   function updateTitle(){
-//     setTitle("my name is " +Math.random())
-//   }
+  function updateTitle(){
+    setTitle("my name is " +Math.random())
+  }
 
-//   return <div>
-//     <button onClick={updateTitle}>Update the title</button>
-//     <Header title={title}></Header>
-//   </div>
-// }
+  return <div>
+    <button onClick={updateTitle}>Update the title</button>
+    <Header title={title}></Header>
+  </div>
+}
 
-// function Header({title}){
-//   return <div>
-//     {title}
-//   </div>
-// }
+function Header({title}){
+  return <div>
+    {title}
+  </div>
+}
 
 
 let counter =4;
