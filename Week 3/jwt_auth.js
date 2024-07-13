@@ -1,6 +1,6 @@
 const express=require('express');
 const jwt=require('jsonwebtoken');
-const jwtPassword="123456";
+const jwtPassword="12345678";
 
 const app=express();
 
